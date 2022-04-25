@@ -1,0 +1,22 @@
+{
+  "name": "vincentzhang92.github.io",
+  "version": "1.0.0",
+  "description": "VincentZhang的笔记",
+  "scripts": {
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vincentZhang92/vincentZhang92.github.io.git"
+  },
+  "author": "Vincent Zhang",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vincentZhang92/vincentZhang92.github.io/issues"
+  },
+  "homepage": "https://github.com/vincentZhang92/vincentZhang92.github.io#readme",
+  "devDependencies": {
+    "vuepress": "^1.9.7"
+  }
+}
