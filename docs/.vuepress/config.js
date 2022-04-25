@@ -6,10 +6,23 @@ module.exports = {
     ['link', { rel: 'icon', href: '/favicon.ico' }]
   ],
   themeConfig: {
-    logo: 'logo.svg',
+    logo: '/logo.svg',
     nav: [
-      { text: '首页', link: '/' }
+      { text: '首页', link: '/' },
+      { text: 'Rollup', link: '/rollup/' }
     ],
+    sidebar: {
+      '/rollup/': [
+        { title: '介绍', path: '/rollup/' },
+        { 
+          title: '配置项', 
+          collapsable: true,
+          children: [
+            '/rollup/options/coreFunctionality.md',
+          ]
+        }
+      ]
+    },
     lastUpdated: '最后更新日期：',
     repo: 'vincentZhang92/vincentZhang92.github.io',
     docsDir: 'docs',
