@@ -6,18 +6,35 @@
     "dev": "vuepress dev docs",
     "build": "vuepress build docs"
   },
+  "devDependencies": {
+    "dayjs": "^1.11.1",
+    "eslint": "^8.14.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "lint-staged": "^12.4.0",
+    "prettier": "^2.6.2",
+    "vuepress": "^1.9.7",
+    "yorkie": "^2.0.0"
+  },
+  "gitHooks": {
+    "pre-commit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.{js}": [
+      "eslint --fix"
+    ],
+    "*.md": [
+      "prettier --write"
+    ]
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/vincentZhang92/vincentZhang92.github.io.git"
   },
-  "author": "Vincent Zhang",
-  "license": "MIT",
   "bugs": {
     "url": "https://github.com/vincentZhang92/vincentZhang92.github.io/issues"
   },
   "homepage": "https://github.com/vincentZhang92/vincentZhang92.github.io#readme",
-  "devDependencies": {
-    "dayjs": "^1.11.1",
-    "vuepress": "^1.9.7"
-  }
+  "author": "Vincent Zhang",
+  "license": "MIT"
 }

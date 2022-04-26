@@ -11,9 +11,7 @@ module.exports = {
     }
   },
   shouldPrefetch: () => false,
-  head: [
-    ['link', { rel: 'icon', href: '/favicon.ico' }]
-  ],
+  head: [['link', { rel: 'icon', href: '/favicon.ico' }]],
   themeConfig: {
     logo: '/logo.svg',
     nav: [
@@ -23,12 +21,10 @@ module.exports = {
     sidebar: {
       '/rollup/': [
         { title: '介绍', path: '/rollup/' },
-        { 
-          title: '配置项', 
+        {
+          title: '配置项',
           collapsable: true,
-          children: [
-            '/rollup/options/coreFunctionality.md',
-          ]
+          children: ['/rollup/options/coreFunctionality.md']
         }
       ]
     },
@@ -39,12 +35,14 @@ module.exports = {
     editLinks: true,
     editLinkText: '帮助VincentZhang92改善此页面！'
   },
-  plugins: [[
-    '@vuepress/last-updated',
-    {
-      transformer: (timestamp) => {
-        return dayjs(timestamp).format('YYYY-MM-DD HH:mm:ss');
+  plugins: [
+    [
+      '@vuepress/last-updated',
+      {
+        transformer: timestamp => {
+          return dayjs(timestamp).format('YYYY-MM-DD HH:mm:ss');
+        }
       }
-    }
-  ]]
-}
+    ]
+  ]
+};
