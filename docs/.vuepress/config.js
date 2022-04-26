@@ -1,4 +1,4 @@
-const moment = require('moment');
+const dayjs = require('dayjs');
 
 module.exports = {
   title: 'VincentZhang的笔记',
@@ -32,7 +32,7 @@ module.exports = {
         }
       ]
     },
-    lastUpdated: '最后更新日期',
+    lastUpdated: '上次更新',
     repo: 'vincentZhang92/vincentZhang92.github.io',
     docsDir: 'docs',
     docsBranch: 'docs',
@@ -42,10 +42,8 @@ module.exports = {
   plugins: [[
     '@vuepress/last-updated',
     {
-      transformer: (timestamp, lang) => {
-        const moment = require('moment');
-        moment.locale(lang);
-        return moment(timestamp).fromNow();
+      transformer: (timestamp) => {
+        return dayjs(timestamp).format('YYYY-MM-DD HH:mm:ss');
       }
     }
   ]]
