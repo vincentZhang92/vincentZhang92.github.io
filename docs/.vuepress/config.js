@@ -24,7 +24,10 @@ module.exports = {
         {
           title: '配置项',
           collapsable: true,
-          children: ['/rollup/options/coreFunctionality.md']
+          children: [
+            '/rollup/options/coreFunctionality.md',
+            '/rollup/options/advancedFunctionality.md'
+          ]
         }
       ]
     },
