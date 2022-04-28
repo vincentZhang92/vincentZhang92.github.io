@@ -1,0 +1,87 @@
+# 配置项列表
+
+::: tip 标记说明
+:muscle: 高级功能；:boom: 危险地带；:star: 实验性功能
+:::
+
+- [external](./coreFunctionality.md#external): 配置外部依赖项
+- [input](./coreFunctionality.md#input): 配置构建的入口点
+- output: 配置输出
+  - [dir](./coreFunctionality.md#output-dir): 存放所有生成的`chunk`的目录(单个`chunk`可使用`file`取代)
+  - [file](./coreFunctionality.md#output-file): 要写入的文件
+  - [format](./coreFunctionality.md#output-format): 指定生成的包的格式
+  - [globals](./coreFunctionality.md#output-globals): 配置全局变量
+  - [name](./coreFunctionality.md#output-name): 配置包的全局变量名(对`iife`/`umd`必备)
+  - [plugins](./coreFunctionality.md#output-plugins): 配置特定于输出的插件
+  - :muscle: [assetFileNames](./advancedFunctionality.md#output-assetfilenames): 对 assets 资源自定义命名
+  - :muscle: [chunkFileNames](./advancedFunctionality.md#output-chunkfilenames): 对代码拆分时创建的共享块自定义命名
+  - :muscle: [entryFileNames](./advancedFunctionality.md#output-entryfilenames): 对入口文件自定义命名
+  - :muscle: [banner/footer](./advancedFunctionality.md#output-banner-output-footer): 在 bundle 前面/后面追加字符串
+  - :muscle: [compact](./advancedFunctionality.md#output-compact): 是否压缩由 rollup 生成的包装器代码
+  - :muscle: [extend](./advancedFunctionality.md#output-extend): 是否扩展在`umd`或`iife`格式下由`name`属性定义的全局变量
+  - :muscle: [generatedCode](./advancedFunctionality.md#output-generatedcode): Rollup 可以在生成的代码中安全地使用哪些语言特性
+    - [preset](./advancedFunctionality.md#output-generatedcode-preset): 允许对预设覆盖一些选项
+    - [arrowFunctions](./advancedFunctionality.md#output-generatedcode-arrowfunctions): 是否为自动生成的代码段使用箭头函数
+    - [constBindings](./advancedFunctionality.md#output-generatedcode-constbindings): 在某些地方和帮助函数中使用`const`而不是`var`
+    - [objectShorthand](./advancedFunctionality.md#output-generatedcode-objectshorthand): 当属性名与值匹配时，允许在对象中使用简写符号
+    - [reservedNamesAsProps](./advancedFunctionality.md#output-generatedcode-reservednamesasprops): 保留字是否可以在不使用引号的情况下用作属性名
+    - [symbols](./advancedFunctionality.md#output-generatedcode-symbols): 是否允许在自动生成的代码片段中使用`Symbol`
+  - :muscle: [hoistTransitiveImports](./advancedFunctionality.md#output-hoisttransitiveimports): 是否入口块的递归导入可以作为空导入被添加到其他入口块中
+  - :muscle: [inlineDynamicImports](./advancedFunctionality.md#output-inlinedynamicimports): 使用内联动态导入
+  - :muscle: [interop](./advancedFunctionality.md#output-interop): 控制 Rollup 处理 default、namespace 及其动态导入的方式
+  - :muscle: [intro/outro](./advancedFunctionality.md#output-intro-output-outro): 在特定于格式的包装器中添加代码
+  - :muscle: [manualChunks](./advancedFunctionality.md#output-manualchunks): 创建自定义共享公共块
+  - :muscle: [minifyInternalExports](./advancedFunctionality.md#output-minifyinternalexports): 将内部变量导出为单个字母变量
+  - :muscle: [paths](./advancedFunctionality.md#output-paths): 将外部模块 id 映射到路径
+  - :muscle: [preserveModules](https://rollupjs.org/guide/en/#outputpreservemodules): 使用原始模块名作为文件名，为所有模块创建单独的块
+  - :muscle: [preserveModulesRoot](https://rollupjs.org/guide/en/#outputpreservemodulesroot): 一个应该从`output.dir`路径中删除的入口模块的目录路径
+  - :muscle: [sourcemap](https://rollupjs.org/guide/en/#outputsourcemap): sourcemap 的创建模式
+  - :muscle: [sourcemapExcludeSources](https://rollupjs.org/guide/en/#outputsourcemapexcludesources): 禁止源代码被添加到 sourcemap 中
+  - :muscle: [sourcemapFile](https://rollupjs.org/guide/en/#outputsourcemapfile): 生成 sourcemap 的位置
+  - :muscle: [sourcemapPathTransform](https://rollupjs.org/guide/en/#outputsourcemappathtransform): 应用于 sourcemap 中每个路径的转换
+  - :muscle: [validate](https://rollupjs.org/guide/en/#outputvalidate): 检测生成的代码是否是有效的 JavaScript
+  - :boom: [amd](https://rollupjs.org/guide/en/#outputamd)
+    - id: 用于 AMD/UMD 捆绑的 ID
+    - autoId: 设置 ID 为 chunk ID
+    - basePath: 作为自动生成的 ID 的前缀路径
+    - define: 取代`define`的函数名
+  - :boom: [esModule](https://rollupjs.org/guide/en/#outputesmodule): 当生成非 ES 格式的导出时，是否添加`__esModule: true`属性
+  - :boom: [exports](https://rollupjs.org/guide/en/#outputexports): 导出模式
+  - :boom: [externalLiveBindings](https://rollupjs.org/guide/en/#outputexternallivebindings): 生成支持外部导入的实时绑定的代码
+  - :boom: [freeze](https://rollupjs.org/guide/en/#outputfreeze): 是否使用`Object.freeze()`命名空间导入动态访问的对象
+  - :boom: [indent](https://rollupjs.org/guide/en/#outputindent): 要使用的缩进字符串
+  - :boom: [noConflict](https://rollupjs.org/guide/en/#outputnoconflict): 这将生成一个额外的`noConflict`输出到 UMD 包
+  - :boom: [preferConst](https://rollupjs.org/guide/en/#outputpreferconst): 为导出生成`const`声明，而不是为`var`声明
+  - :boom: [sanitizeFileName](https://rollupjs.org/guide/en/#outputsanitizefilename): 消除 chunk 名字中的特殊字符(`\0`, `?`, `*`)
+  - :boom: [strict](https://rollupjs.org/guide/en/#outputstrict): 是否在生成的非 es 包的顶部包含`'use strict'`
+  - :boom: [systemNullSetters](https://rollupjs.org/guide/en/#outputsystemnullsetters): 当输出`system`模块格式时，这将用`null`替换空的 setter 函数
+- [plugins](./coreFunctionality.md#plugins): 配置插件
+- :muscle: [cache](./advancedFunctionality.md#cache): 缓存
+- :muscle: [makeAbsoluteExternalsRelative](./advancedFunctionality.md#makeabsoluteexternalsrelative): 将输出中绝对外部路径转换为相对路径
+- :muscle: [maxParallelFileReads](./advancedFunctionality.md#maxparallelfilereads): 限制汇总读取模块时并行打开的文件数量
+- :muscle: [onwarn](./advancedFunctionality.md#onwarn): 拦截警告消息的函数
+- :muscle: [preserveEntrySignatures](https://rollupjs.org/guide/en/#preserveentrysignatures): 控制 Rollup 确保入口文件是否应该像底层入口模块一样导出的方式
+- :muscle: [strictDeprecations](https://rollupjs.org/guide/en/#strictdeprecations): 当使用弃用的特性时，Rollup 将抛出错误而不是显示警告
+- :boom: [acorn](https://rollupjs.org/guide/en/#acorn): acornjs 配置，详情参阅[Acorn 文档](https://github.com/acornjs/acorn/tree/master/acorn#interface)
+- :boom: [acornInjectPlugins](https://rollupjs.org/guide/en/#acorninjectplugins): acornjs 插件
+- :boom: [context](https://rollupjs.org/guide/en/#context): 模块的上下文
+- :boom: [moduleContext](https://rollupjs.org/guide/en/#modulecontext): 按 id 区分不同模块的上下文
+- :boom: [preserveSymlinks](https://rollupjs.org/guide/en/#preservesymlinks): 解析文件时遵循符号链接
+- :boom: [shimMissingExports](https://rollupjs.org/guide/en/#shimmissingexports): 从没有定义绑定的文件导入绑定是否失败
+- :boom: [treeshake](https://rollupjs.org/guide/en/#treeshake): 是否应用 tree-shaking 和微调 tree-shaking 过程
+  - :boom: preset: 选择准备覆盖部分选项的预设
+  - :boom: annotations: 是否忽略来自纯注释的提示
+  - :boom: correctVarValueBeforeDeclaration: Rollup 是否对 var 声明的变量的值做常量假设
+  - :boom: moduleSideEffects: 禁止空导入
+  - :boom: propertyReadSideEffects: 是否将读取但为使用的对象属性作为副作用(side effects)
+  - :boom: tryCatchDeoptimization: 是否支持依赖于那些被抛出的错误的特征检测工作流
+  - :boom: unknownGlobalSideEffects: Rollup 是否保留对非内置全局变量的任何访问
+- :star: [experimentalCacheExpiry](https://rollupjs.org/guide/en/#experimentalcacheexpiry): 确定在运行了多少次缓存后插件不再使用的资产应该被删除
+- :star: [perf](https://rollupjs.org/guide/en/#perf): 是否收集`performance timings`
+- [watch](https://rollupjs.org/guide/en/#watch-options): 监视模式
+  - [buildDelay](https://rollupjs.org/guide/en/#watchbuilddelay): 配置 Rollup 在触发重新生成之前等待进一步更改的时间(以毫秒为单位)
+  - [chokidar](https://rollupjs.org/guide/en/#watchchokidar): [chokidar](https://github.com/paulmillr/chokidar#api)选项
+  - [clearScreen](https://rollupjs.org/guide/en/#watchclearscreen): 触发重构时是否清除屏幕
+  - [exclude](https://rollupjs.org/guide/en/#watchexclude): 防止文件被监视
+  - [include](https://rollupjs.org/guide/en/#watchinclude): 将文件监视限制在某些文件
+  - [skipWrite](https://rollupjs.org/guide/en/#watchskipwrite): 是否在触发重新构建时跳过`bundle.write()`步骤

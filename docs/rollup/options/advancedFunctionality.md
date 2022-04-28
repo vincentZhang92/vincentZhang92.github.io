@@ -31,7 +31,7 @@ buildWithCache()
 
 ## makeAbsoluteExternalsRelative
 
-类型: `RollupCache | false`
+类型: `boolean | "ifRelativeSource"`
 
 命令: `--makeAbsoluteExternalsRelative/--no-makeAbsoluteExternalsRelative`
 
@@ -166,7 +166,7 @@ export default {
 
 默认：`false`
 
-这将减少由 rollup 生成的包装器代码。注意，这不会影响用户编写的代码。这个选项在绑定预压缩的代码时很有用。
+这将压缩由 rollup 生成的包装器代码。注意，这不会影响用户编写的代码。这个选项在绑定预压缩的代码时很有用。
 
 ## output.entryFileNames
 
@@ -200,7 +200,7 @@ export default {
 
 默认：`false`
 
-是否以`umd`或`iife`格式扩展`name`选项定义的全局变量。当为`true`时，全局变量将定义为`(global.name = global.name ||{})`。 当为`false`时，由`name`定义的全局将被覆盖，就像`(global.name ={})`一样。
+是否扩展在`umd`或`iife`格式下由`name`属性定义的全局变量。当为`true`时，全局变量将定义为`(global.name = global.name ||{})`。 当为`false`时，由`name`定义的全局将被覆盖，就像`(global.name ={})`一样。
 
 ## output.generatedCode
 
@@ -397,9 +397,9 @@ exports.foo = foo;
 
 默认：`true`
 
-在创建多个块时，默认情况下，条目块的可传递导入将作为空导入添加到条目块。有关详细信息和背景信息，请参阅["Why do additional imports turn up in my entry chunks when code-splitting?"](https://rollupjs.org/guide/en/#why-do-additional-imports-turn-up-in-my-entry-chunks-when-code-splitting) 。将此选项设置为`false`将禁用此行为。使用[output.preserveModules]() 选项时会忽略此选项，导入将永远不会被提升。
+默认当创建多个块时，入口块的递归导入将作为空导入被添加到入口块中。有关详细信息和背景信息，请参阅["Why do additional imports turn up in my entry chunks when code-splitting?"](https://rollupjs.org/guide/en/#why-do-additional-imports-turn-up-in-my-entry-chunks-when-code-splitting) 。将此选项设置为`false`将禁用此行为。使用[output.preserveModules]() 选项时会忽略此选项，导入将永远不会被提升。
 
-## output.hoistTransitiveImports
+## output.inlineDynamicImports
 
 类型: `boolean`
 
@@ -407,7 +407,7 @@ exports.foo = foo;
 
 默认：`false`
 
-这将内联动态导入，而不是创建新的块来创建单个包。只有在提供单个输入时才可能 注意，这将改变执行顺序：如果动态导入是内联的，则只动态导入的模块将立即执行。
+这将使用内联动态导入，而不是创建新的块来创建单个包。只有在提供单个输入时才可以使用。注意，这将改变执行顺序：如果动态导入是内联的，则只动态导入的模块将立即执行。
 
 ## output.interop
 
@@ -417,7 +417,7 @@ exports.foo = foo;
 
 默认：`true`
 
-控制 Rollup 如何处理来自外部依赖的 default、命名空间和动态导入，格式如 CommonJS，不支持这些概念。请注意，即使`true`是当前的默认值，该值已被弃用，并将在 Rollup 的下一个主要版本中被`“auto”`替换。在本例中，我们将使用 CommonJS 格式，但互操作同样适用于 AMD、IIFE 和 UMD 目标。详情参阅[output.interop](https://rollupjs.org/guide/en/#outputinterop)。
+控制 Rollup 如何处理 default、namespace 和来自格式类似于 CommonJS 这种没有官方支持这些概念的外部依赖的动态导入的方式。请注意，即使`true`是当前的默认值，该值已被弃用，并将在 Rollup 的下一个主要版本中被`“auto”`替换。详情参阅[output.interop](https://rollupjs.org/guide/en/#outputinterop)。
 
 ## output.intro/output.outro
 

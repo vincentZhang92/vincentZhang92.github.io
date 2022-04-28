@@ -23,8 +23,9 @@ module.exports = {
         { title: '介绍', path: '/rollup/' },
         {
           title: '配置项',
-          collapsable: true,
+          // collapsable: false,
           children: [
+            '/rollup/options/',
             '/rollup/options/coreFunctionality.md',
             '/rollup/options/advancedFunctionality.md'
           ]
