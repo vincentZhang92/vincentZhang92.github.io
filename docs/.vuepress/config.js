@@ -40,6 +40,7 @@ module.exports = {
           children: [
             '/codeLint/eslint/',
             '/codeLint/eslint/configurationFile.md',
+            '/codeLint/eslint/rules.md',
             '/codeLint/eslint/parser.md'
           ]
         }
