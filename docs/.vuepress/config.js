@@ -16,18 +16,31 @@ module.exports = {
     logo: '/logo.svg',
     nav: [
       { text: '首页', link: '/' },
-      { text: 'Rollup', link: '/rollup/' }
+      { text: 'Rollup', link: '/rollup/' },
+      { text: '代码规范', link: '/codeLint/' }
     ],
     sidebar: {
       '/rollup/': [
         { title: '介绍', path: '/rollup/' },
         {
           title: '配置项',
-          // collapsable: false,
+          collapsable: true,
           children: [
             '/rollup/options/',
             '/rollup/options/coreFunctionality.md',
             '/rollup/options/advancedFunctionality.md'
+          ]
+        }
+      ],
+      '/codeLint/': [
+        { title: '总览', path: '/codeLint/' },
+        {
+          title: 'ESLint',
+          collapsable: true,
+          children: [
+            '/codeLint/eslint/',
+            '/codeLint/eslint/configurationFile.md',
+            '/codeLint/eslint/parser.md'
           ]
         }
       ]
