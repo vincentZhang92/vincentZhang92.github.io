@@ -363,3 +363,37 @@ JavaScript 会挂起`try`和`catch`块的控制流语句，直到`finally`块的
 - [caughtErrorsIgnorePattern](https://eslint.org/docs/rules/no-unused-vars#caughterrorsignorepattern): 指定不检查的异常:catch 参数的名称匹配 regexp 模式。
 
 **ESLint Version**: 0.0.9
+
+## [no-use-before-define](https://eslint.org/docs/rules/no-use-before-define)
+
+禁止在定义前使用变量。
+
+在 JavaScript 中，在 ES6 之前，变量和函数的声明被提升到作用域的顶部，所以可以在代码中正式声明它们之前使用标识符。这可能会令人困惑，有些人认为最好总是在使用变量和函数之前声明它们。
+
+**ESLint Version**: 0.0.9
+
+## [no-useless-backreference](https://eslint.org/docs/rules/no-useless-backreference)<Badge text="eslint:recommended" type="tip" />
+
+禁止在正则表达式中使用无用的反向引用
+
+**ESLint Version**: 7.0.0-alpha.0
+
+## [require-atomic-updates](https://eslint.org/docs/rules/require-atomic-updates)
+
+禁止由于使用`await`或`yield`而导致竞态条件的赋值
+
+该规则的目的是在赋值可能基于过时值的情况下报告对变量或属性的赋值。
+
+**ESLint Version**: 5.3.0
+
+## [use-isnan](https://eslint.org/docs/rules/use-isnan)<Badge text="eslint:recommended" type="tip" />
+
+检查`NaN`时需要调用`isNaN()`
+
+**ESLint Version**: 0.0.6
+
+## [valid-typeof](https://eslint.org/docs/rules/valid-typeof)<Badge text="eslint:recommended" type="tip" />
+
+强制`typeof`表达式与有效字符串进行比较
+
+**ESLint Version**: 0.5.0

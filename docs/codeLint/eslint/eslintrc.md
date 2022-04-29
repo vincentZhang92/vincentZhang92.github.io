@@ -24,7 +24,14 @@ module.exports = {
     'no-template-curly-in-string': 2,
     'no-unmodified-loop-condition': 2,
     'no-unreachable-loop': 2,
-    'no-unused-private-class-members': 2
+    'no-unused-private-class-members': 2,
+    'no-use-before-define': 2,
+    'require-atomic-updates': [
+      2,
+      {
+        allowProperties: true
+      }
+    ]
   }
 };
 ```
