@@ -1,4 +1,9 @@
 const dayjs = require('dayjs');
+const timezone = require('dayjs/plugin/timezone');
+const utc = require('dayjs/plugin/utc');
+
+dayjs.extend(utc);
+dayjs.extend(timezone);
 
 module.exports = {
   title: 'VincentZhang的笔记',
@@ -68,7 +73,7 @@ module.exports = {
       '@vuepress/last-updated',
       {
         transformer: timestamp => {
-          return dayjs(timestamp).format('YYYY-MM-DD HH:mm:ss');
+          return dayjs(timestamp).tz('Asia/Shanghai').format('YYYY-MM-DD HH:mm:ss');
         }
       }
     ]
