@@ -44,6 +44,15 @@ module.exports = {
             '/codeLint/eslint/parser.md',
             '/codeLint/eslint/plugin.md'
           ]
+        },
+        {
+          title: 'Prettier',
+          collapsable: true,
+          children: [
+            '/codeLint/prettier/',
+            '/codeLint/prettier/usage.md',
+            '/codeLint/prettier/options.md'
+          ]
         }
       ]
     },
