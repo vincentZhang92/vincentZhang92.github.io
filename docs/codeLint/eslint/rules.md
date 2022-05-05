@@ -397,3 +397,173 @@ JavaScript 会挂起`try`和`catch`块的控制流语句，直到`finally`块的
 强制`typeof`表达式与有效字符串进行比较
 
 **ESLint Version**: 0.5.0
+
+## [accessor-pairs](https://eslint.org/docs/rules/accessor-pairs)<Badge text="suggestion" type="warning" />
+
+在对象和类中强制 getter/setter 对
+
+**ESLint Version**: 0.22.0
+
+## [arrow-body-style](https://eslint.org/docs/rules/arrow-body-style)<Badge text="suggestion" type="warning" />
+
+在箭头函数体中需要大括号
+
+**ESLint Version**: 1.8.0
+
+## [block-scoped-var](https://eslint.org/docs/rules/block-scoped-var)<Badge text="suggestion" type="warning" />
+
+强制将 var 作为块作用域处理
+
+当变量在定义变量的块之外使用时，`block-scope-var`规则会生成警告。这模拟了 C 风格的块作用域。
+
+**ESLint Version**: 0.1.0
+
+## [camelcase](https://eslint.org/docs/rules/camelcase)<Badge text="suggestion" type="warning" />
+
+强制使用驼峰命名规则
+
+当涉及到命名变量时，风格指南通常分为两大阵营:驼峰式(`variableName`)和下划线(`variable_name`)。该规则侧重于使用驼峰式方法。
+
+**ESLint Version**: 0.0.2
+
+## [capitalized-comments](https://eslint.org/docs/rules/capitalized-comments)<Badge text="suggestion" type="warning" />
+
+强制或禁止将注释的第一个字母大写。
+
+注释对于为将来的开发人员留下信息非常有用。为了使该信息有用而不分散注意力，有时希望注释遵循特定的风格。注释格式样式的一个元素是注释的第一个单词应该大写还是小写。
+
+一般来说，没有哪一种注释风格比其他的更有效或更不有效，但是许多开发人员都同意一致的注释风格可以提高项目的可维护性。
+
+**ESLint Version**: 3.11.0
+
+## [class-methods-use-this](https://eslint.org/docs/rules/class-methods-use-this)<Badge text="suggestion" type="warning" />
+
+强制`class`的方法使用`this`。
+
+如果`class`的方法不使用`this`，有时可以将其制成静态函数。如果将方法转换为静态函数，则调用该方法的`class`的实例也必须转换为静态调用(`MyClass.callStaticMethod()`)
+
+**ESLint Version**: 3.4.0
+
+## [complexity](https://eslint.org/docs/rules/complexity)<Badge text="suggestion" type="warning" />
+
+强制最大圈复杂度。
+
+圈复杂度度量通过程序源代码的线性独立路径的数量。该规则允许设置圈复杂度阈值。
+
+```js
+function a(x) {
+  if (true) {
+    return x; // 1st path
+  } else if (false) {
+    return x + 1; // 2nd path
+  } else {
+    return 4; // 3rd path
+  }
+}
+```
+
+**ESLint Version**: 0.0.9
+
+## [consistent-return](https://eslint.org/docs/rules/consistent-return)<Badge text="suggestion" type="warning" />
+
+要求`return`语句总是或从不指定值
+
+**ESLint Version**: 0.4.0
+
+## [consistent-this](https://eslint.org/docs/rules/consistent-this)<Badge text="suggestion" type="warning" />
+
+在捕获当前执行上下文时强制一致的命名。即对`this`采用一致的别名。
+
+**ESLint Version**: 0.0.9
+
+## [curly](https://eslint.org/docs/rules/curly)<Badge text="suggestion" type="warning" />
+
+要求遵循花括号约定。
+
+当一个块只包含一条语句时，JavaScript 允许省略花括号。然而，许多人认为永远不要省略块周围的花括号是最佳实践，即使它们是可选的，因为它会导致错误和降低代码的清晰度。
+
+**ESLint Version**: 0.0.2
+
+## [default-case](https://eslint.org/docs/rules/default-case)<Badge text="suggestion" type="warning" />
+
+switch 语句中需要一个`default`条件
+
+**ESLint Version**: 0.6.0
+
+## [default-case-last](https://eslint.org/docs/rules/default-case-last)<Badge text="suggestion" type="warning" />
+
+强制 switch 语句中的`default`语句位于最后
+
+**ESLint Version**: 7.0.0-alpha.0
+
+## [default-param-last](https://eslint.org/docs/rules/default-param-last)<Badge text="suggestion" type="warning" />
+
+强制默认参数放在最后
+
+将默认形参置于最后允许函数调用忽略可选的尾部参数。
+
+**ESLint Version**: 6.4.0
+
+## [dot-notation](https://eslint.org/docs/rules/dot-notation)<Badge text="suggestion" type="warning" />
+
+尽可能使用点表示法。
+
+在 JavaScript 中，可以使用点表示法(`foo.bar`)或方括号表示法(`foo["bar"]`)访问属性。然而，点表示法通常是首选的，因为它更容易阅读，更少的冗长，并与积极的 JavaScript 最小化器更好地工作。
+
+**ESLint Version**: 0.0.7
+
+## [eqeqeq](https://eslint.org/docs/rules/eqeqeq)<Badge text="suggestion" type="warning" />
+
+需要使用`===`和`!==`。
+
+使用类型安全的相等操作符`===`和`!==`而不是它们的常规对应操作符`==`和`!=`被认为是一种良好的实践。
+
+**ESLint Version**: 0.0.2
+
+## [func-name-matching](https://eslint.org/docs/rules/func-name-matching)<Badge text="suggestion" type="warning" />
+
+要求函数名与赋值给它们的变量或属性的名称匹配。
+
+**ESLint Version**: 3.8.0
+
+## [func-names](https://eslint.org/docs/rules/func-names)<Badge text="suggestion" type="warning" />
+
+要求或禁止命名`function`表达式。
+
+一种越来越普遍的模式是给函数表达式命名以帮助调试。
+
+**ESLint Version**: 0.4.0
+
+## [func-style](https://eslint.org/docs/rules/func-style)<Badge text="suggestion" type="warning" />
+
+强制一致地使用`function`声明或表达式。
+
+在 JavaScript 中定义函数有两种方式: `function`声明和`function`表达式。
+
+声明首先包含`function`关键字，然后是名称，然后是参数和函数体，例如:
+
+```js
+function doSomething() {
+  // ...
+}
+```
+
+等价的函数表达式以 var 关键字开头，然后是函数名，然后是函数本身，例如:
+
+```js
+var doSomething = function () {
+  // ...
+};
+```
+
+`function`声明和`function`表达式之间的主要区别是，声明被提升到定义它们的作用域的顶部，这允许您编写在声明之前使用函数的代码。对于表达式，你必须在使用前定义函数，否则就会报错。
+
+**ESLint Version**: 0.2.0
+
+## [grouped-accessor-pairs](https://eslint.org/docs/rules/grouped-accessor-pairs)<Badge text="suggestion" type="warning" />
+
+在对象字面量和类中需要分组访问器对
+
+同一个属性的 getter 和 setter 不一定要相邻定义。该规则要求在对象字面量、类声明和类表达式中对相同属性的访问器函数进行分组定义。
+
+**ESLint Version**: 6.7.0
