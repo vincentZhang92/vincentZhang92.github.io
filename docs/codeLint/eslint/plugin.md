@@ -27,3 +27,29 @@ module.exports = {
 ```
 
 ### [rules](https://typescript-eslint.io/rules/)
+
+## eslint-plugin-vue
+
+### 介绍
+
+与 vue-eslint-parser 结合使用捕获一些错误
+
+### 要求
+
+ESLint: v6.2.0 或更高
+
+Node.js: v12.22.x, v14.17.x, v16.x 或更高
+
+### extends
+
+- plugin:vue/base: 确保启用正确的 ESLint 解析的设置和规则。
+
+- plugin:vue/vue3-essential: 包括`base`和防止错误或意外行为的规则。
+- plugin:vue/vue3-strongly-recommended: 在`vue3-essential`基础上增加可以大大提高代码可读性或开发体验的规则。
+- plugin:vue/vue3-recommended: 在`vue3-strongly-recommended`基础上增加了强制执行社区主观上默认的规则，以确保一致性。
+
+- plugin:vue/essential: 包括`base`和防止错误或意外行为的规则。
+- plugin:vue/strongly-recommended: 在`essential`基础上增加可以大大提高代码可读性或开发体验的规则。
+- plugin:vue/recommended: 在`strongly-recommended`基础上增加了强制执行社区主观上默认的规则，以确保一致性。
+
+### [rules](https://eslint.vuejs.org/rules/)

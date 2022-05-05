@@ -80,3 +80,43 @@ prettier --check .
 ::: tip
 更多命令查看[CLI](https://prettier.io/docs/en/cli.html)
 :::
+
+## 与 Linters 结合
+
+### [eslint-config-prettier](https://github.com/prettier/eslint-config-prettier)
+
+1. 安装
+
+```shell
+npm install --save-dev eslint-config-prettier
+```
+
+2. 添加配置到`.eslintrc.json`中
+
+```js
+{
+  "extends": [
+    // other configs ...
+    "plugin:prettier/recommended"
+  ]
+}
+```
+
+### [stylelint-config-prettier](https://github.com/prettier/stylelint-config-prettier)
+
+1. 安装
+
+```shell
+npm install --save-dev stylelint-config-prettier
+```
+
+2. 添加配置到`.stylelintrc.*`文件中
+
+```js
+{
+  "extends": [
+    // other configs ...
+    "stylelint-config-prettier"
+  ]
+}
+```
