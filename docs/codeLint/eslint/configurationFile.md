@@ -1,4 +1,4 @@
-# ESLint 配置
+# 配置
 
 这里只是简单概括，完整版请查阅[官网](https://eslint.org/docs/user-guide/configuring/)
 

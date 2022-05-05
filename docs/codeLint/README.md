@@ -1,5 +1,5 @@
-# 代码规范
+## 工具列表
 
-## 官方资源
-
-- [Eslint 官网](https://eslint.org/)
+- [ESLint](./eslint/README.md)
+- [Prettier](./prettier/README.md)
+- [EditorConfig](./editorConfig/README.md)

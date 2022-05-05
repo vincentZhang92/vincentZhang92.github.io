@@ -17,7 +17,7 @@ module.exports = {
     nav: [
       { text: '首页', link: '/' },
       { text: 'Rollup', link: '/rollup/' },
-      { text: '代码规范', link: '/codeLint/' }
+      { text: '代码规范', link: '/codeLint/eslint/' }
     ],
     sidebar: {
       '/rollup/': [
@@ -33,7 +33,6 @@ module.exports = {
         }
       ],
       '/codeLint/': [
-        { title: '总览', path: '/codeLint/' },
         {
           title: 'ESLint',
           collapsable: true,
@@ -53,7 +52,8 @@ module.exports = {
             '/codeLint/prettier/usage.md',
             '/codeLint/prettier/options.md'
           ]
-        }
+        },
+        { title: 'EditorConfig', path: '/codeLint/editorConfig/' }
       ]
     },
     lastUpdated: '上次更新',
