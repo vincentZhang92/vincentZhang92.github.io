@@ -58,7 +58,16 @@ module.exports = {
             '/codeLint/prettier/options.md'
           ]
         },
-        { title: 'EditorConfig', path: '/codeLint/editorConfig/' }
+        { title: 'EditorConfig', path: '/codeLint/editorConfig/' },
+        {
+          title: 'Stylelint',
+          collapsable: true,
+          children: [
+            '/codeLint/stylelint/',
+            '/codeLint/stylelint/usage.md',
+            '/codeLint/stylelint/configuration.md'
+          ]
+        }
       ]
     },
     lastUpdated: '上次更新',
