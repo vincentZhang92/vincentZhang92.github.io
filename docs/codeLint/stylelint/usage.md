@@ -1,7 +1,3 @@
----
-sidebarDepth: 3
----
-
 # 安装与使用
 
 ## 基础用法
@@ -41,7 +37,7 @@ npm install --save-dev stylelint-config-prettier
 
 :::
 
-## 高级用法
+## 约束其他样式语言
 
 你需要使用社区编写的自定义语法。
 
@@ -69,10 +65,7 @@ npm install --save-dev stylelint stylelint-config-standard-scss
 
 ```json
 {
-  "extends": [
-    "stylelint-config-standard-scss",
-    "stylelint-config-prettier-scss"
-  ]
+  "extends": ["stylelint-config-standard-scss", "stylelint-config-prettier-scss"]
 }
 ```
 

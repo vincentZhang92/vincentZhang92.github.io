@@ -22,24 +22,15 @@
     "skipLibCheck": true,
     "noImplicitThis": true,
     "importHelpers": true,
-    "removeComments": true,
-    "types": ["vite/client"],
-    "paths": {
-      "@theme/*": ["docs/.vitepress/theme/*"],
-    },
-    "typeRoots": [
-      "node_modules/@types/",
-      "types/"
-    ]
+    "removeComments": true
   },
   "include": [
-    "docs/.vitepress/theme/**/*.ts",
-    "docs/.vitepress/theme/**/*.d.ts",
-    "docs/.vitepress/theme/**/*.tsx",
-    "docs/.vitepress/theme/**/*.vue",
-    "docs/.vitepress/**/*.ts",
-    "docs/.vitepress/**/*.d.ts",
-    "types/**/*.d.ts"
+    "docs/**/*.ts",
+    "docs/**/*.d.ts",
+    "docs/**/*.tsx",
+    "docs/**/*.vue",
+    "docs/.vuepress/**/*.ts",
+    "docs/.vuepress/**/*.d.ts"
   ],
   "exclude": ["node_modules", "dist", "**/*.js"]
 }

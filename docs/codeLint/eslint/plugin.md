@@ -1,7 +1,3 @@
----
-sidebarDepth: 3
----
-
 # 插件
 
 ## @typescript-eslint/eslint-plugin

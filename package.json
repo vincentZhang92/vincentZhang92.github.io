@@ -3,27 +3,21 @@
   "version": "1.0.0",
   "description": "VincentZhang的笔记",
   "scripts": {
-    "dev": "vitepress dev docs",
-    "build": "vitepress build docs",
-    "serve": "vitepress serve docs"
-  },
-  "dependencies": {
-    "vue": "^3.2.33"
+    "dev": "vuepress dev docs",
+    "build": "vuepress build docs"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.22.0",
     "@typescript-eslint/parser": "^5.22.0",
-    "@vue/compiler-sfc": "^3.2.33",
+    "@vuepress/plugin-back-to-top": "^1.9.7",
     "dayjs": "^1.11.1",
     "eslint": "^8.14.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.0.0",
-    "eslint-plugin-vue": "^8.7.1",
     "lint-staged": "^12.4.0",
     "prettier": "^2.6.2",
     "typescript": "^4.6.4",
-    "vitepress": "^0.22.4",
-    "vue-eslint-parser": "^8.3.0",
+    "vuepress": "^1.9.7",
     "yorkie": "^2.0.0"
   },
   "gitHooks": {

@@ -8,7 +8,7 @@ module.exports = {
   // Use single quotes in JSX.
   jsxSingleQuote: true,
   // The line length where Prettier will try wrap.
-  printWidth: 80,
+  printWidth: 100,
   // Print semicolons.
   semi: true,
   // Use single quotes instead of double quotes.
