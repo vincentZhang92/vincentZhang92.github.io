@@ -1,4 +1,4 @@
 node_modules
-!docs/.vuepress
-docs/.vuepress/dist/*
-docs/.vuepress/public/*
+!docs/.vitepress
+docs/.vitepress/dist/*
+docs/.vitepress/public/*

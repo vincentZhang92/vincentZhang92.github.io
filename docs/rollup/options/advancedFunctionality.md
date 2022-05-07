@@ -1,3 +1,7 @@
+---
+sidebarDepth: 3
+---
+
 # 高级功能
 
 ## cache
