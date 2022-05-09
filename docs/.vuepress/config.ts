@@ -40,6 +40,7 @@ export default defineConfig(ctx => ({
         }
       ],
       '/codeLint/': [
+        { title: 'EditorConfig', path: '/codeLint/editorConfig/' },
         {
           title: 'ESLint',
           collapsable: true,
@@ -60,7 +61,6 @@ export default defineConfig(ctx => ({
             '/codeLint/prettier/options.md'
           ]
         },
-        { title: 'EditorConfig', path: '/codeLint/editorConfig/' },
         {
           title: 'Stylelint',
           collapsable: true,
