@@ -23,8 +23,8 @@ export default defineConfig(ctx => ({
     nav: [
       { text: '首页', link: '/' },
       { text: 'Rollup', link: '/rollup/' },
-      { text: '代码规范', link: '/codeLint/eslint/' }
-      // { text: '杂七杂八', link: '/others/' }
+      { text: '代码规范', link: '/codeLint/eslint/' },
+      { text: '杂七杂八', link: '/others/' }
     ],
     sidebar: {
       '/rollup/': [
@@ -77,7 +77,8 @@ export default defineConfig(ctx => ({
     docsDir: 'docs',
     docsBranch: 'docs',
     editLinks: true,
-    editLinkText: '帮助VincentZhang92改善此页面！'
+    editLinkText: '帮助VincentZhang92改善此页面！',
+    smoothScroll: true
   },
   plugins: [
     ['@vuepress/back-to-top', true],
